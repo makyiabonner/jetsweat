@@ -48,6 +48,32 @@ a {
   display: none;
 }
 
+.Hero {
+  position: relative;
+  height: 43em;
+  width: 100%;
+  box-shadow: 0 10px 15px black;
+}
+.Hero--video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Hero--text {
+  position: absolute;
+  max-width: 50rem;
+  margin-left: 2rem;
+  color: white;
+  font-size: 3.6rem;
+  bottom: 20%;
+}
+.Hero--text::after {
+  display: block;
+  content: ' anytime, anywhere';
+  color: #9ac8b9;
+}
+
 @keyframes slidedownText {
   from {
     transform: translateY(-80px);
@@ -84,7 +110,7 @@ a {
   .Offcanvas {
     display: block;
     position: fixed;
-    background-color: red;
+    background-color: white;
     width: 100%;
     height: 100%;
     animation: appear .7s;
@@ -102,5 +128,23 @@ a {
     gap: .5em;
     list-style: none;
     margin-top: 2.5em;
+  }
+
+  .Hero {
+    box-shadow: none;
+  }
+  
+  .Hero--text {
+    bottom: 30%;
+    font-size: clamp(1.5rem, 7vw, 3.6rem);
+    margin-left: 1rem;
+  }
+
+  .Hero--transition {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 5%, white 95%);
+    width: 100%;
+    height: 9em;
   }
 }
