@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: red;
+  padding-inline: 1.3em;
+  height: 4em;
+}
+
+.Nav--logo {
+  height: 2.5rem;
+}
+
+.Nav--container--desktop-menu {
+  display: flex;
+  justify-self: center;
+  gap: 4em;
+}
+
+.Nav--item {
+  color: black;
+}
+
+.Nav--item:hover{
+  color: gray;
+  transition: all .2s;
+}
+.Nav--container--desktop-login {
+  justify-self: flex-end;
+  padding: .6rem 1.3rem;
+  border-radius: .4rem;
+  border: none;
+  background-color: #9ac8b9;
+  font-size: 1rem;
+  font-weight: 900;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Nav--container--desktop-login:hover {
+  background-color: #617770;
+  transition: all .8s;
 }
 
-@keyframes App-logo-spin {
+.Menu--mobile-toggle,
+.Offcanvas {
+  display: none;
+}
+
+@keyframes slidedownText {
   from {
-    transform: rotate(0deg);
+    transform: translateY(-80px);
+    opacity: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .Nav--container--desktop-menu,
+  .Nav--container--desktop-login {
+    display: none;
+  }
+
+  .Menu--mobile-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .Offcanvas {
+    display: block;
+    position: fixed;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    animation: appear .7s;
+  }
+  
+  .Nav--item {
+    font-size: 1.2rem;
+    opacity: 1;
+    animation: slidedownText 1s;
+  }
+
+  .Offcanvas--list {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    list-style: none;
+    margin-top: 2.5em;
   }
 }
