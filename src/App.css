@@ -67,6 +67,8 @@ a {
   color: white;
   font-size: 3.6rem;
   bottom: 20%;
+  animation: slidedownText 2s;
+
 }
 .Hero--text::after {
   display: block;
@@ -133,7 +135,7 @@ a {
   .Hero {
     box-shadow: none;
   }
-  
+
   .Hero--text {
     bottom: 30%;
     font-size: clamp(1.5rem, 7vw, 3.6rem);
