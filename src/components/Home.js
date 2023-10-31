@@ -27,19 +27,28 @@ export default function Home() {
   ];
 
   return (
-    <div className="Home--Outer-div">
-      {contents.map((content, index) => {
-        return (
-          <HomeSection
-            id={index}
-            isEven={(index + 1) % 2 == 0}
-            subtitle={content.subtitle}
-            details={content.details}
-            img={content.img}
-            alt={content.alt}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className="Home--Outer-div">
+        {contents.map((content, index) => {
+          return (
+            <HomeSection
+              id={index}
+              isEven={(index + 1) % 2 == 0}
+              subtitle={content.subtitle}
+              details={content.details}
+              img={content.img}
+              alt={content.alt}
+            />
+          );
+        })}
+      </div>
+      <div className="Home--second-section">
+        <h1 className="subtitle Home--second-subtitle">
+          Do it all for $19.99/mo - just half the cost of a single class or
+          session at our studios!
+        </h1>
+        <button className="Button--primary">Start Your Free Trial</button>
+      </div>
+    </>
   );
 }

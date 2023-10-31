@@ -25,7 +25,7 @@ export default function Main() {
             with hundreds of on-demand classes & sessions from top boutique
             fitness + wellness studios in every category.
           </p>
-          <button className="Main--button">Start Your Free Trial</button>
+          <button className="Button--primary">Start Your Free Trial</button>
         </div>
         <img
           alt="desktop browser studios tab woman is working out and next to the desktop browser mobile image with running  Jetsweat app"
