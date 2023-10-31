@@ -208,12 +208,17 @@ a {
   display: flex;
   width: 70%;
   margin: 5em auto;
+  gap: 8em;
 }
-
+.reverse {
+  flex-direction: row-reverse;
+  text-align: end;
+}
 .Home--section {
   max-width: 40rem;
 }
 .Home--section-subtitle {
+  max-width: 30rem;
   font-size: clamp(1rem,2vw,2rem);
 }
 .Home--section-details {
@@ -225,6 +230,7 @@ a {
 .Home--section-img {
   width: clamp(20em, 30vw, 50em);
 }
+
 @media (max-width: 670px) {
   .Main {
     flex-direction: column-reverse;
@@ -304,6 +310,7 @@ a {
     align-items: center;
     flex-direction: column-reverse;
     text-align: center;
+    gap: 0;
   }
   
   .Home--section {
@@ -318,5 +325,9 @@ a {
 
   .Home--section-details {
     font-size: .9rem;
+  }
+
+  .Home--section-img {
+    width: 20em;
   }
 }
