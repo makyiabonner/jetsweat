@@ -4,10 +4,20 @@ a {
 
 .Nav {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 4em;
+}
+
+.Nav--div {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1.3em;
-  height: 4em;
+  width: 90%;
 }
 
 .Nav--logo {
@@ -118,6 +128,34 @@ a {
   color: #9ac8b9;
 }
 
+.Banner {
+  background-color:#9ac8b9;
+  width: 100%;
+  display: flex;
+  gap: 5em;
+}
+
+.Banner--list {
+  list-style: none;
+  display: flex;
+  gap: 6em;
+}
+
+.Banner--list-item {
+  font-size: 1.2rem;
+  width: 12em;
+  font-weight: bold;
+  color: #313d39;
+}
+
+@keyframes banner {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000%);
+  }
+}
 @keyframes slidedownText {
   from {
     transform: translateY(-80px);
@@ -140,6 +178,53 @@ a {
   }
 }
 
+.Container {
+  position: relative;
+  margin-top: 8em;
+  width: 100vw;
+  height: 90vh;
+}
+
+.Container--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+.Container--title-div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.Container--title {
+  font-size: clamp(4rem, 20vw, 15rem);
+  color: rgb(58, 95, 80);
+}
+
+.Home {
+  display: flex;
+  width: 70%;
+  margin: 5em auto;
+}
+
+.Home--section {
+  max-width: 40rem;
+}
+.Home--section-subtitle {
+  font-size: clamp(1rem,2vw,2rem);
+}
+.Home--section-details {
+  font-size: clamp(.7rem,1.8vw,1.3rem);
+  max-width: 30rem;
+  line-height: 1.7em;
+}
+
+.Home--section-img {
+  width: clamp(20em, 30vw, 50em);
+}
 @media (max-width: 670px) {
   .Main {
     flex-direction: column-reverse;
@@ -167,6 +252,7 @@ a {
     display: block;
     position: fixed;
     background-color: white;
+    z-index: 99999;
     width: 100%;
     height: 100%;
     animation: appear .7s;
@@ -183,7 +269,7 @@ a {
     flex-direction: column;
     gap: .5em;
     list-style: none;
-    margin-top: 2.5em;
+    margin-top: 4.5em;
   }
 
   .Hero {
@@ -212,5 +298,25 @@ a {
 
   .Main--button {
     align-self: center;
+  }
+
+  .Home {
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .Home--section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Home--section-subtitle {
+    font-size: 1rem;
+  }
+
+  .Home--section-details {
+    font-size: .9rem;
   }
 }
