@@ -136,6 +136,7 @@ body {
   width: 100%;
   display: flex;
   gap: 5em;
+  overflow-x: hidden;
 }
 
 .Banner--list {
@@ -157,14 +158,6 @@ body {
   }
   to {
     transform: translateX(-100%);
-  }
-}
-@keyframes banner {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1000%);
   }
 }
 @keyframes slidedownText {
