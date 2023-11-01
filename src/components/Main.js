@@ -10,6 +10,7 @@ export default function Main() {
           preload="auto"
           loop
           playsInline
+          webkit-playsinline="true"
           autoPlay
           muted
         />
