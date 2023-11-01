@@ -4,7 +4,11 @@ export default function Banner() {
   return (
     <>
       <div className="Container">
-        <img className="Container--img" src={yoga} />
+        <img
+          className="Container--img"
+          src={yoga}
+          alt="Woman sitting in meditation with her dog sitting by her waist side"
+        />
         <div className="Container--title-div">
           <h1 className="Container--title">STREAM</h1>
         </div>

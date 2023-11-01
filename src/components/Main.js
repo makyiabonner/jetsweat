@@ -28,7 +28,7 @@ export default function Main() {
           <button className="Button--primary">Start Your Free Trial</button>
         </div>
         <img
-          alt="desktop browser studios tab woman is working out and next to the desktop browser mobile image with running  Jetsweat app"
+          alt="desktop browser studios tab woman is working out"
           className="Main--img"
           src="https://jetsweatfitness.com/static/media/devices.c8ba7ea1.png"
         />

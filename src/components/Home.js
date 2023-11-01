@@ -33,7 +33,7 @@ export default function Home() {
           return (
             <HomeSection
               id={index}
-              isEven={(index + 1) % 2 == 0}
+              isEven={(index + 1) % 2 === 0}
               subtitle={content.subtitle}
               details={content.details}
               img={content.img}
