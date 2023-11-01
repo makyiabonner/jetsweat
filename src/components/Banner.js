@@ -13,7 +13,7 @@ export default function Banner() {
           <h1 className="Container--title">STREAM</h1>
         </div>
       </div>
-      <marquee className="Banner">
+      <section className="Banner">
         <ul className="Banner--list">
           <li className="Banner--list-item">Why join JETSWEAT?</li>
           <li className="Banner--list-item">Why join JETSWEAT?</li>
@@ -28,7 +28,7 @@ export default function Banner() {
           <li className="Banner--list-item">Why join JETSWEAT?</li>
           <li className="Banner--list-item">Why join JETSWEAT?</li>
         </ul>
-      </marquee>
+      </section>
     </>
   );
 }
