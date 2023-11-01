@@ -6,14 +6,15 @@ export default function Main() {
       <section className="Hero">
         <video
           className="Hero--video"
-          src={video}
           preload="auto"
           loop
           playsInline
           webkit-playsinline="true"
           autoPlay
           muted
-        />
+        >
+          <source src={video} type="video/mp4" />
+        </video>
         <h1 className="Hero--text">
           The best boutique fitness classes in the world,
         </h1>
